@@ -276,6 +276,11 @@ if (taskListEl) {
 }
 }
 
+var loadTasks = function() {
+  localStorage.getItem("tasks", tasks);
+  JSON.parse(tasks);
+}
+
 var saveTasks = function() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
